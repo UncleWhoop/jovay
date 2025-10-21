@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function DeveloperSlider() {
   const cards = [
@@ -63,9 +65,11 @@ export default function DeveloperSlider() {
               className="shrink-0 w-14 h-14 flex items-center justify-center hover:opacity-80 transition-opacity"
               aria-label="Previous cards"
             >
-              <img
+              <Image
                 src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/gNoiQaQkePIAAAAAQYAAAAgADlxJAQFr/original"
                 alt="Previous"
+                width={56}
+                height={56}
                 className="w-full h-full"
               />
             </button>
@@ -79,7 +83,7 @@ export default function DeveloperSlider() {
                 }}
               >
                 {cards.map((card, i) => (
-                  <a
+                  <Link
                     key={i}
                     href={card.link}
                     target="_blank"
@@ -90,9 +94,11 @@ export default function DeveloperSlider() {
                              hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/VD1MSaJm2MsAAAAARAAAAAgADlxJAQFr/original')] 
                              hover:bg-size-[100%_auto] hover:bg-position-[0px_100%] hover:bg-no-repeat"
                   >
-                    <img
+                    <Image
                       src={card.img}
                       alt={card.title}
+                      width={80}
+                      height={80}
                       className="w-20 h-20"
                     />
                     <h3 className="text-[#191919] text-lg font-medium text-center">
@@ -101,7 +107,7 @@ export default function DeveloperSlider() {
                     <p className="text-[#7C7E7A] text-sm text-center">
                       {card.description}
                     </p>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -112,9 +118,11 @@ export default function DeveloperSlider() {
               className="shrink-0 w-14 h-14 flex items-center justify-center hover:opacity-80 transition-opacity"
               aria-label="Next cards"
             >
-              <img
+              <Image
                 src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/WeY9TaaCA4cAAAAAQSAAAAgADlxJAQFr/original"
                 alt="Next"
+                width={56}
+                height={56}
                 className="w-full h-full"
               />
             </button>
@@ -138,24 +146,24 @@ export default function DeveloperSlider() {
 
             <div className="flex flex-row gap-5 items-center">
               <div className="my-4 py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
-                <a
+                <Link
                   href="/developer"
                   className="inline-flex items-center justify-center bg-white rounded-full px-3 md:px-6 py-[15px] h-8 md:h-[52px] text-xs md:text-base relative"
                 >
                   <span className="relative z-10 text-black">
                     Explore Developer Center
                   </span>
-                </a>
+                </Link>
               </div>
 
-              <a
+              <Link
                 href="https://discord.gg/vBxayT6SBw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base font-medium opacity-85 border-b border-[#326cff] text-[#326cff] whitespace-nowrap hover:opacity-100 transition-opacity"
               >
                 Join our Discord
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import DeveloperSlider from "./components/DeveloperSlider";
 
 export default function Home() {
@@ -9,21 +10,23 @@ export default function Home() {
           <div className="w-full md:w-[1160px] flex items-center justify-between">
             <div className="flex items-center gap-[58px]">
               <div className="flex items-center gap-3">
-                <a href="/">
-                  <img
+                <Link href="/">
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="logo"
+                    width={120}
+                    height={28}
                     className="w-auto h-4 md:h-7"
                   />
-                </a>
+                </Link>
 
                 <div className="items-center hidden md:flex">
                   <ul className="flex items-center min-w-[500px] gap-8">
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <a className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Developer
-                        </a>
+                        </Link>
                         <svg
                           viewBox="64 64 896 896"
                           className="w-4 h-4 fill-current"
@@ -36,9 +39,9 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <a className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Ecosystem
-                        </a>
+                        </Link>
                         <svg
                           viewBox="64 64 896 896"
                           className="w-4 h-4 fill-current"
@@ -51,9 +54,9 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <a className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           RWA
-                        </a>
+                        </Link>
                         <svg
                           viewBox="64 64 896 896"
                           className="w-4 h-4 fill-current"
@@ -66,9 +69,9 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <a className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Resource
-                        </a>
+                        </Link>
                         <svg
                           viewBox="64 64 896 896"
                           className="w-4 h-4 fill-current"
@@ -82,7 +85,7 @@ export default function Home() {
 
                   <div className="w-px h-8 bg-gray-300 mx-6"></div>
 
-                  <a
+                  <Link
                     className="text-[rgba(0,4,12,0.80)] font-medium text-base flex items-center hover:text-[#326CFF] transition-colors"
                     href="https://explorer.jovay.io/l2"
                     target="_blank"
@@ -96,7 +99,7 @@ export default function Home() {
                     >
                       <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z"></path>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -145,17 +148,17 @@ export default function Home() {
             </div>
 
             <div className="mt-4 flex justify-center md:justify-start gap-6">
-              <a
+              <Link
                 href="https://docs.jovay.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white w-[148px] md:w-[224px] h-[34px] md:h-[56px] text-xs md:text-base flex items-center justify-center hover:opacity-90 transition-opacity"
               >
                 View developer docs
-              </a>
+              </Link>
 
               <div className="py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
-                <a
+                <Link
                   href="/institutions-retention"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -164,7 +167,7 @@ export default function Home() {
                   <span className="relative z-10 text-black">
                   Institutional solutions
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -246,19 +249,21 @@ export default function Home() {
                   h: "h-8",
                 },
               ].map((partner) => (
-                <a
+                <Link
                   key={partner.name}
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mx-6 flex items-center justify-center shrink-0"
                 >
-                  <img
+                  <Image
                     alt={partner.name}
                     src={partner.src}
+                    width={120}
+                    height={40}
                     className={`${partner.h} w-auto grayscale hover:grayscale-0 transition-all duration-300`}
                   />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -324,9 +329,11 @@ export default function Home() {
 
               <div className="flex flex-col justify-between gap-5 md:gap-0">
                 <div className="flex items-start gap-4">
-                  <img
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NBKGSYvO_osAAAAATZAAAAgADlxJAQFr/original"
                     alt="why-jovay"
+                    width={36}
+                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -341,9 +348,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <img
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/KSpcS64E-rUAAAAATYAAAAgADlxJAQFr/original"
                     alt="why-jovay"
+                    width={36}
+                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -358,9 +367,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <img
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/CJyiR5m3DgQAAAAATOAAAAgADlxJAQFr/original"
                     alt="why-jovay"
+                    width={36}
+                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -389,7 +400,7 @@ export default function Home() {
                 throughput, gas fees, locked assets, and transaction volume.
               </div>
               <div className="my-4 py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
-                <a
+                <Link
                   href="https://explorer.jovay.io/l2"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -398,7 +409,7 @@ export default function Home() {
                   <span className="relative z-10 text-black">
                     View in Block Explorer
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -503,10 +514,12 @@ export default function Home() {
               blockchain through innovative technologies while maintaining
               compatibility with the Ethereum ecosystem.
             </div>
-            <img
+            <Image
               className="w-full h-auto mt-[16px]!"
               src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/2zN2QomSBIQAAAAAgCAAAAgADlxJAQFr/original"
               alt="Layer2 Architecture Overview"
+              width={1160}
+              height={600}
             />
           </div>
         </section>
@@ -554,12 +567,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <a
+              <Link
                 href="/rwa"
                 className="text-sm md:text-base font-medium text-white opacity-85 border-b border-white whitespace-nowrap hover:opacity-100 transition-opacity"
               >
                 Explore RWA Solution
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -572,9 +585,11 @@ export default function Home() {
             <div className="w-[1160px] flex flex-col gap-8">
               <div className="flex flex-wrap items-start justify-between gap-16 lg:gap-24 xl:gap-32">
                 <div className="flex flex-col gap-4">
-                  <img
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="jovay"
+                    width={100}
+                    height={40}
                     className="w-[100px] h-auto"
                   />
                   <div className="w-[300px] text-base opacity-50">
@@ -583,25 +598,33 @@ export default function Home() {
                     and Web3.
                   </div>
                   <div className="flex gap-3 items-center">
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/zH4qQ5bC0igAAAAAHHAAAAgADlxJAQFr/original"
                       alt="Email"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/5TiPRa_GIz4AAAAAAAAAAAAADlxJAQFr/original"
                       alt="Discord"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_hsbbrh/afts/img/A*M6r5R7zmbawAAAAAAAAAAAAADiOMAQ/original"
                       alt="X"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NAabSbq6MMwAAAAAAAAAAAAADlxJAQFr/original"
                       alt="Telegram"
+                      width={32}
+                      height={32}
                     />
                   </div>
                 </div>
@@ -611,47 +634,47 @@ export default function Home() {
                     <div className="font-semibold">Developer</div>
                     <ul className="flex flex-col gap-4">
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="/developer"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Developer Center
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://docs.jovay.io/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Documentation
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://smartcogent.jovay.io/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           SmartCogent
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://docs.jovay.io/guide/developer-quickstart#method-2-faucet-testnet-only"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Testnet Faucet
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all inline-flex items-center"
                           href="https://github.com/jovaynetwork"
                           target="_blank"
@@ -665,7 +688,7 @@ export default function Home() {
                           >
                             <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z"></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -674,24 +697,24 @@ export default function Home() {
                     <div className="font-semibold">Ecosystem</div>
                     <ul className="flex flex-col gap-4">
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="/ecosystem"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Explore Ecosystem
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://bridge.jovay.io/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Bridge
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -700,24 +723,24 @@ export default function Home() {
                     <div className="font-semibold">RWA</div>
                     <ul className="flex flex-col gap-4">
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="/rwa"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           RWA on Jovay
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="/institutions-retention"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           For Institutions
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -726,34 +749,34 @@ export default function Home() {
                     <div className="font-semibold">Resources</div>
                     <ul className="flex flex-col gap-4">
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://docs.jovay.io/guide/jovay-white-paper"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Whitepaper
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="/news"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           News
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="opacity-50 text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                           href="https://github.com/jovaynetwork/brand-kit"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           Brand Kit
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -765,7 +788,7 @@ export default function Home() {
                   Contact Us
                 </button>
 
-                <a
+                <Link
                   href="https://discord.gg/vBxayT6SBw"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -776,49 +799,49 @@ export default function Home() {
                       Join discord
                     </span>
                   </div>
-                </a>
+                </Link>
               </div>
 
               <div className="h-px bg-white opacity-20 mb-0"></div>
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <a
+                  <Link
                     className="text-white hover:text-white"
                     href="https://docs.jovay.io/legal/terms-of-service"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Terms of Services
-                  </a>
+                  </Link>
                   <div className="w-px h-[18px] bg-white opacity-40"></div>
-                  <a
+                  <Link
                     className="text-white hover:text-white"
                     href="https://docs.jovay.io/legal/privacy-policy"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-3">
-                  <a
+                  <Link
                     className="text-white hover:text-white"
                     href="https://intl.antdigital.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Ant Group Digital Technologies
-                  </a>
+                  </Link>
                   <div className="w-px h-5 bg-white opacity-40"></div>
-                  <a
+                  <Link
                     className="text-white hover:text-white"
                     href="https://openlabs-intl.antdigital.com/home"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     AntChain Open Lab
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -837,9 +860,11 @@ export default function Home() {
             <div className="w-full px-3 flex flex-col gap-6">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex flex-col gap-4">
-                  <img
+                  <Image
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="jovay"
+                    width={78}
+                    height={31}
                     className="w-[78px] h-auto"
                   />
                   <div className="w-[300px] text-sm opacity-50">
@@ -848,25 +873,33 @@ export default function Home() {
                     and Web3.
                   </div>
                   <div className="flex gap-3 items-center">
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/zH4qQ5bC0igAAAAAHHAAAAgADlxJAQFr/original"
                       alt="Email"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/5TiPRa_GIz4AAAAAAAAAAAAADlxJAQFr/original"
                       alt="Discord"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_hsbbrh/afts/img/A*M6r5R7zmbawAAAAAAAAAAAAADiOMAQ/original"
                       alt="X"
+                      width={32}
+                      height={32}
                     />
-                    <img
+                    <Image
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NAabSbq6MMwAAAAAAAAAAAAADlxJAQFr/original"
                       alt="Telegram"
+                      width={32}
+                      height={32}
                     />
                   </div>
                 </div>
@@ -876,14 +909,14 @@ export default function Home() {
                 <button className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-6 py-1.5 h-[34px] text-xs hover:opacity-90 transition-opacity">
                   Contact Us
                 </button>
-                <a
+                <Link
                   href="https://discord.gg/vBxayT6SBw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center border-2 border-transparent bg-linear-to-r from-[#326cff] to-[#6effff] bg-clip-border rounded-full text-[#326cff] px-6 py-1.5 h-[34px] text-xs relative before:absolute before:inset-[2px] before:bg-black before:rounded-full before:-z-10 hover:opacity-90 transition-opacity"
                 >
                   <span className="relative z-10">Join discord</span>
-                </a>
+                </Link>
               </div>
 
               <div className="flex-1 flex flex-col gap-3">
@@ -953,43 +986,43 @@ export default function Home() {
 
             <div className="flex flex-col gap-3">
               <div className="text-xs flex items-center gap-2">
-                <a
+                <Link
                   className="text-white hover:text-white"
                   href="https://docs.jovay.io/legal/terms-of-service"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Terms of Services
-                </a>
+                </Link>
                 <div className="w-px h-4 bg-white opacity-40"></div>
-                <a
+                <Link
                   className="text-white hover:text-white"
                   href="https://docs.jovay.io/legal/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </div>
 
               <div className="text-xs flex items-center gap-3">
-                <a
+                <Link
                   className="text-white hover:text-white"
                   href="https://intl.antdigital.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Ant Group Digital Technologies
-                </a>
+                </Link>
                 <div className="w-px h-4 bg-white opacity-40"></div>
-                <a
+                <Link
                   className="text-white hover:text-white"
                   href="https://openlabs-intl.antdigital.com/home"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   AntChain Open Lab
-                </a>
+                </Link>
               </div>
 
               <div className="flex items-center justify-between">
