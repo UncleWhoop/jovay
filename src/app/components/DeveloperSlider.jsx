@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function DeveloperSlider() {
   const cards = [
@@ -65,11 +64,9 @@ export default function DeveloperSlider() {
               className="shrink-0 w-14 h-14 flex items-center justify-center hover:opacity-80 transition-opacity"
               aria-label="Previous cards"
             >
-              <Image
+              <img
                 src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/gNoiQaQkePIAAAAAQYAAAAgADlxJAQFr/original"
                 alt="Previous"
-                width={56}
-                height={56}
                 className="w-full h-full"
               />
             </button>
@@ -94,11 +91,9 @@ export default function DeveloperSlider() {
                              hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/VD1MSaJm2MsAAAAARAAAAAgADlxJAQFr/original')] 
                              hover:bg-size-[100%_auto] hover:bg-position-[0px_100%] hover:bg-no-repeat"
                   >
-                    <Image
+                    <img
                       src={card.img}
                       alt={card.title}
-                      width={80}
-                      height={80}
                       className="w-20 h-20"
                     />
                     <h3 className="text-[#191919] text-lg font-medium text-center">
@@ -118,11 +113,9 @@ export default function DeveloperSlider() {
               className="shrink-0 w-14 h-14 flex items-center justify-center hover:opacity-80 transition-opacity"
               aria-label="Next cards"
             >
-              <Image
+              <img
                 src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/WeY9TaaCA4cAAAAAQSAAAAgADlxJAQFr/original"
                 alt="Next"
-                width={56}
-                height={56}
                 className="w-full h-full"
               />
             </button>

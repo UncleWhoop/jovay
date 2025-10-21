@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import DeveloperSlider from "./components/DeveloperSlider";
 
@@ -11,11 +10,9 @@ export default function Home() {
             <div className="flex items-center gap-[58px]">
               <div className="flex items-center gap-3">
                 <Link href="/">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="logo"
-                    width={120}
-                    height={28}
                     className="w-auto h-4 md:h-7"
                   />
                 </Link>
@@ -24,7 +21,7 @@ export default function Home() {
                   <ul className="flex items-center min-w-[500px] gap-8">
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link href="/" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Developer
                         </Link>
                         <svg
@@ -39,7 +36,7 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link href="/ecosystem" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Ecosystem
                         </Link>
                         <svg
@@ -54,7 +51,7 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link href="/rwa" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           RWA
                         </Link>
                         <svg
@@ -69,7 +66,7 @@ export default function Home() {
 
                     <li className="relative group">
                       <div className="flex items-center gap-2 cursor-pointer">
-                        <Link className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
+                        <Link href="/resources" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
                           Resource
                         </Link>
                         <svg
@@ -256,7 +253,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mx-6 flex items-center justify-center shrink-0"
                 >
-                  <Image
+                  <img
                     alt={partner.name}
                     src={partner.src}
                     width={120}
@@ -329,11 +326,9 @@ export default function Home() {
 
               <div className="flex flex-col justify-between gap-5 md:gap-0">
                 <div className="flex items-start gap-4">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NBKGSYvO_osAAAAATZAAAAgADlxJAQFr/original"
                     alt="why-jovay"
-                    width={36}
-                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -348,11 +343,9 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/KSpcS64E-rUAAAAATYAAAAgADlxJAQFr/original"
                     alt="why-jovay"
-                    width={36}
-                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -367,11 +360,9 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/CJyiR5m3DgQAAAAATOAAAAgADlxJAQFr/original"
                     alt="why-jovay"
-                    width={36}
-                    height={36}
                     className="w-9"
                   />
                   <div className="flex flex-col gap-3">
@@ -514,12 +505,10 @@ export default function Home() {
               blockchain through innovative technologies while maintaining
               compatibility with the Ethereum ecosystem.
             </div>
-            <Image
+            <img
               className="w-full h-auto mt-[16px]!"
               src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/2zN2QomSBIQAAAAAgCAAAAgADlxJAQFr/original"
               alt="Layer2 Architecture Overview"
-              width={1160}
-              height={600}
             />
           </div>
         </section>
@@ -585,11 +574,9 @@ export default function Home() {
             <div className="w-[1160px] flex flex-col gap-8">
               <div className="flex flex-wrap items-start justify-between gap-16 lg:gap-24 xl:gap-32">
                 <div className="flex flex-col gap-4">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="jovay"
-                    width={100}
-                    height={40}
                     className="w-[100px] h-auto"
                   />
                   <div className="w-[300px] text-base opacity-50">
@@ -598,33 +585,25 @@ export default function Home() {
                     and Web3.
                   </div>
                   <div className="flex gap-3 items-center">
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/zH4qQ5bC0igAAAAAHHAAAAgADlxJAQFr/original"
                       alt="Email"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/5TiPRa_GIz4AAAAAAAAAAAAADlxJAQFr/original"
                       alt="Discord"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_hsbbrh/afts/img/A*M6r5R7zmbawAAAAAAAAAAAAADiOMAQ/original"
                       alt="X"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NAabSbq6MMwAAAAAAAAAAAAADlxJAQFr/original"
                       alt="Telegram"
-                      width={32}
-                      height={32}
                     />
                   </div>
                 </div>
@@ -860,11 +839,9 @@ export default function Home() {
             <div className="w-full px-3 flex flex-col gap-6">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex flex-col gap-4">
-                  <Image
+                  <img
                     src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
                     alt="jovay"
-                    width={78}
-                    height={31}
                     className="w-[78px] h-auto"
                   />
                   <div className="w-[300px] text-sm opacity-50">
@@ -873,33 +850,25 @@ export default function Home() {
                     and Web3.
                   </div>
                   <div className="flex gap-3 items-center">
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/zH4qQ5bC0igAAAAAHHAAAAgADlxJAQFr/original"
                       alt="Email"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/5TiPRa_GIz4AAAAAAAAAAAAADlxJAQFr/original"
                       alt="Discord"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_hsbbrh/afts/img/A*M6r5R7zmbawAAAAAAAAAAAAADiOMAQ/original"
                       alt="X"
-                      width={32}
-                      height={32}
                     />
-                    <Image
+                    <img
                       className="w-8 h-8 object-contain cursor-pointer hover:opacity-100 rounded-md p-1.5 bg-white/10"
                       src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/NAabSbq6MMwAAAAAAAAAAAAADlxJAQFr/original"
                       alt="Telegram"
-                      width={32}
-                      height={32}
                     />
                   </div>
                 </div>
