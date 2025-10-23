@@ -1,134 +1,14 @@
 import Link from "next/link";
 import DeveloperSlider from "./components/DeveloperSlider";
+import Navigation from "./components/Navigation";
 
 export default function Home() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen bg-white overflow-x-hidden">
-      <header className="bg-transparent w-full p-0 font-bold fixed top-0 z-1000 flex items-start md:items-center">
-        <div className="bg-white/31 backdrop-blur-sm flex justify-center items-center w-full h-11 md:h-16 px-4 md:px-0">
-          <div className="w-full md:w-[1160px] flex items-center justify-between">
-            <div className="flex items-center gap-[58px]">
-              <div className="flex items-center gap-3">
-                <Link href="/">
-                  <img
-                    src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/AL7HQ6tCvAoAAAAAQMAAAAgADlxJAQFr/original"
-                    alt="logo"
-                    className="w-auto h-4 md:h-7"
-                  />
-                </Link>
-
-                <div className="items-center hidden md:flex">
-                  <ul className="flex items-center min-w-[500px] gap-8">
-                    <li className="relative group">
-                      <div className="flex items-center gap-2 cursor-pointer">
-                        <Link href="/" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
-                          Developer
-                        </Link>
-                        <svg
-                          viewBox="64 64 896 896"
-                          className="w-4 h-4 fill-current"
-                          fill="currentColor"
-                        >
-                          <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                        </svg>
-                      </div>
-                    </li>
-
-                    <li className="relative group">
-                      <div className="flex items-center gap-2 cursor-pointer">
-                        <Link href="/ecosystem" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
-                          Ecosystem
-                        </Link>
-                        <svg
-                          viewBox="64 64 896 896"
-                          className="w-4 h-4 fill-current"
-                          fill="currentColor"
-                        >
-                          <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                        </svg>
-                      </div>
-                    </li>
-
-                    <li className="relative group">
-                      <div className="flex items-center gap-2 cursor-pointer">
-                        <Link href="/rwa" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
-                          RWA
-                        </Link>
-                        <svg
-                          viewBox="64 64 896 896"
-                          className="w-4 h-4 fill-current"
-                          fill="currentColor"
-                        >
-                          <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                        </svg>
-                      </div>
-                    </li>
-
-                    <li className="relative group">
-                      <div className="flex items-center gap-2 cursor-pointer">
-                        <Link href="/resources" className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors">
-                          Resource
-                        </Link>
-                        <svg
-                          viewBox="64 64 896 896"
-                          className="w-4 h-4 fill-current"
-                          fill="currentColor"
-                        >
-                          <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
-                        </svg>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <div className="w-px h-8 bg-gray-300 mx-6"></div>
-
-                  <Link
-                    className="text-[rgba(0,4,12,0.80)] font-medium text-base flex items-center hover:text-[#326CFF] transition-colors"
-                    href="https://explorer.jovay.io/l2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>Explorer</span>
-                    <svg
-                      viewBox="64 64 896 896"
-                      className="w-3.5 h-3.5 ml-1 -rotate-45"
-                      fill="currentColor"
-                    >
-                      <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z"></path>
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex md:hidden items-center mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                className="w-4 h-4 cursor-pointer"
-              >
-                <defs>
-                  <clipPath id="master_svg0_24_16090">
-                    <rect x="0" y="0" width="16" height="16" rx="0"></rect>
-                  </clipPath>
-                </defs>
-                <g clipPath="url(#master_svg0_24_16090)">
-                  <g>
-                    <path
-                      d="M14.4997078125,11.333334123535156C14.5917078125,11.333334123535156,14.6663078125,11.407954123535156,14.6663078125,11.499994123535156L14.6663078125,12.416664123535156C14.6663078125,12.508714123535157,14.5917078125,12.583334123535156,14.4997078125,12.583334123535156L1.4996748125,12.583334123535156C1.4076271125,12.583334123535156,1.3330078125,12.508714123535157,1.3330078125,12.416664123535156L1.3330078125,11.499994123535156C1.333008422852,11.407954123535156,1.4076275125,11.333334123535156,1.4996748125,11.333334123535156L14.4997078125,11.333334123535156ZM9.8330078125,7.374994123535156C9.9250578125,7.374994123535156,9.9996778125,7.449614123535156,9.9996778125,7.541664123535156L9.9996778125,8.458334123535156C9.9996778125,8.550374123535157,9.9250578125,8.624994123535156,9.8330078125,8.624994123535156L1.4996748125,8.624994123535156C1.4076277125,8.624994123535156,1.333008422852,8.550374123535157,1.333008422852,8.458334123535156L1.333008422852,7.541664123535156C1.333008422852,7.449614123535156,1.4076277125,7.374994123535156,1.4996748125,7.374994123535156L9.8330078125,7.374994123535156ZM14.4997078125,7.374994123535156C14.5917078125,7.374994123535156,14.6663078125,7.449614123535156,14.6663078125,7.541664123535156L14.6663078125,8.458334123535156C14.6663078125,8.550374123535157,14.5917078125,8.624994123535156,14.4997078125,8.624994123535156L11.4997078125,8.624994123535156C11.4076078125,8.624994123535156,11.3330078125,8.550374123535157,11.3330078125,8.458334123535156L11.3330078125,7.541664123535156C11.3330078125,7.449614123535156,11.4076078125,7.374994123535156,11.4997078125,7.374994123535156L14.4997078125,7.374994123535156ZM14.4997078125,3.4166641235351562C14.5917078125,3.4166638183591562,14.6663078125,3.4912832235351563,14.6663078125,3.583331123535156L14.6663078125,4.499994123535156C14.6663078125,4.592044123535157,14.5917078125,4.666664123535156,14.4997078125,4.666664123535156L1.4996748125,4.666664123535156C1.4076271125,4.666664123535156,1.3330078125,4.592044123535157,1.3330078125,4.499994123535156L1.3330078125,3.583331123535156C1.3330078125,3.4912832235351563,1.4076271125,3.4166638183591562,1.4996748125,3.4166641235351562L14.4997078125,3.4166641235351562Z"
-                      fill="#326CFF"
-                      fillOpacity="1"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      
+      <Navigation />
+      
+      
       <main className="flex flex-col items-center sm:items-start">
         <section className="w-full flex items-center justify-center bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/bHuJSbVv7CUAAAAATUAAAAgADlxJAQFr/original')] md:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/S1_HQ5bs5MUAAAAAeLAAAAgADlxJAQFr/original')] bg-cover bg-center bg-no-repeat p-[84px_24px_40px] md:p-[210px_100px_150px]">
           <div className="w-full md:w-[1160px] flex flex-col items-stretch gap-4">
@@ -149,23 +29,21 @@ export default function Home() {
                 href="https://docs.jovay.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white w-[148px] md:w-[224px] h-[34px] md:h-[56px] text-xs md:text-base flex items-center justify-center hover:opacity-90 transition-opacity"
+                className="border py-2 px-4 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white text-xs md:text-base flex items-center justify-center"
               >
                 View developer docs
               </Link>
 
-              <div className="py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
-                <Link
-                  href="/institutions-retention"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-white rounded-full px-3 md:px-6 py-[15px] h-8 md:h-[52px] text-xs md:text-base relative"
-                >
-                  <span className="relative z-10 text-black">
-                  Institutional solutions
-                  </span>
-                </Link>
-              </div>
+              <Link
+                href="https://docs.jovay.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border py-2 px-4 border-[#326cff] text-[#326cff] rounded-full text-xs md:text-base flex items-center justify-center"
+              >
+                Institutional solutions
+              </Link>
+
+             
             </div>
           </div>
         </section>
@@ -178,6 +56,7 @@ export default function Home() {
           <div className="relative w-full overflow-hidden">
             <div className="flex whitespace-nowrap animate-slide-slow">
               {/* Partner logos */}
+
               {[
                 {
                   name: "Aave",
@@ -256,9 +135,9 @@ export default function Home() {
                   <img
                     alt={partner.name}
                     src={partner.src}
-                    width={120}
+                    width={60}
                     height={40}
-                    className={`${partner.h} w-auto grayscale hover:grayscale-0 transition-all duration-300`}
+                    className={`w-[90px] h-[20px] md:w-[130px] md:h-[25px] grayscale hover:grayscale-0 transition-all duration-300`}
                   />
                 </Link>
               ))}
@@ -272,6 +151,7 @@ export default function Home() {
               <h2 className="text-black text-2xl md:text-[38px] font-medium text-center">
                 Why Jovay?
               </h2>
+
               <div className="text-[#666F8D] text-sm md:text-lg text-center leading-[22px] md:leading-[27px] w-full md:w-[890px]">
                 Jovay empowers developers to accelerate Web3 innovation with
                 secure, compliant, and highly scalable infrastructure, providing
@@ -494,24 +374,34 @@ export default function Home() {
 
         <DeveloperSlider></DeveloperSlider>
 
-        <section className="w-full flex items-center justify-center pb-16">
-          <div className="py-4 px-8 md:py-0 md:px-24 w-full md:w-[1160px] flex flex-col gap-4">
-            <h1 className="text-[#1D1E1E] text-2xl md:text-[38px] font-semibold text-center">
+        <div className="w-full flex items-center justify-center">
+          <div className="w-full md:w-[1160px] px-4 py-8 md:px-0 md:py-24 flex flex-col items-stretch gap-4">
+            <h1 className="text-[#1D1E1E] text-2xl md:text-[38px] font-semibold text-center leading-tight">
               Layer2 Architecture Overview
             </h1>
-            <div className="text-[#666F8D] text-sm md:text-base text-center">
+
+            <p className="text-[#666F8D] text-sm md:text-base text-center">
               Jovay is a high-performance, user-friendly Layer 2 scaling
               solution that aims to break through the scalability bottleneck of
               blockchain through innovative technologies while maintaining
               compatibility with the Ethereum ecosystem.
-            </div>
+            </p>
+
+            {/* Mobile image */}
             <img
-              className="w-full h-auto mt-[16px]!"
+              className="w-full h-auto mt-4 md:hidden"
+              src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/l2JuR5DUP8cAAAAAejAAAAgADlxJAQFr/original"
+              alt="Layer2 Architecture Overview"
+            />
+
+            {/* Desktop image */}
+            <img
+              className="w-full h-auto mt-4 hidden md:block"
               src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/2zN2QomSBIQAAAAAgCAAAAgADlxJAQFr/original"
               alt="Layer2 Architecture Overview"
             />
           </div>
-        </section>
+        </div>
 
         <section className="w-full px-4 md:px-0 pt-6 md:pt-0 pb-12 md:pb-24 flex items-center justify-center bg-[url(https://mdn.alipayobjects.com/huamei_lc6ihc/afts/img/eA3zS4F7AZYAAAAAgBAAAAgADltnAQFr/original)] bg-size-[100%_auto] bg-position-[center_200px] sm:bg-position-[center_100px] md:bg-position-[center_-200px] bg-no-repeat">
           <div className="p-4 md:p-8 w-full md:w-[1160px] bg-black bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/gjPdQa52ZDQAAAAAULAAAAgADlxJAQFr/original')] md:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/gPj7QYA9ZIgAAAAARPAAAAgADlxJAQFr/fmt.webp')] bg-size-[100%_100%] md:bg-cover bg-center bg-no-repeat rounded-2xl flex flex-col gap-4">
@@ -524,7 +414,7 @@ export default function Home() {
               to global liquidity.
             </div>
 
-            <div className="mt-4 flex flex-row items-start md:items-center gap-2.5 md:gap-9">
+            <div className="mt-4 flex flex-col-reverse md:flex-row items-start md:items-center gap-2.5 md:gap-9">
               <div className="flex flex-col items-start justify-start gap-4">
                 <div className="border-2 border-transparent bg-linear-to-r from-[#326CFF] to-[#8B5CF6] bg-clip-border h-9 md:h-[52px] rounded-[34px] md:rounded-[48px] relative before:absolute before:inset-[2px] before:bg-white before:rounded-[32px] md:before:rounded-[46px] before:-z-10">
                   <div className="relative z-10 flex items-center h-8 md:h-12 w-full rounded-[34px] md:rounded-[48px] border-none pl-6 bg-white">

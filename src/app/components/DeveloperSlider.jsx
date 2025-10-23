@@ -56,7 +56,7 @@ export default function DeveloperSlider() {
   return (
     <section className="w-full container mx-auto px-4 md:px-20">
       <div className="px-4 mb-24">
-        <div className="flex items-center justify-between flex-col md:flex-row gap-8">
+        <div className="flex items-center justify-between flex-col-reverse md:flex-row gap-8">
           <div className="w-[80%] md:w-[60%] flex flex-row gap-5 items-center justify-center">
             {/* Left Button */}
             <button
@@ -124,20 +124,20 @@ export default function DeveloperSlider() {
           {/* Right text block */}
           <div className="flex flex-col justify-between gap-4 w-[90%] md:w-[40%]">
 
-            <h1 className="text-black text-[36px] font-medium flex flex-col">
+            <h1 className="text-black text-[36px] font-medium flex flex-col text-center md:text-left">
               <span>Engineered for Builders.</span>
               <span className="bg-linear-to-r from-[#6effff] to-[#326cff] bg-clip-text text-transparent">
                 Ready for Scale.
               </span>
             </h1>
 
-            <p className="text-[#666F8D] text-lg">
+            <p className="text-[#666F8D] text-lg text-center md:text-left">
               Jovay provides a comprehensive suite of tools and resources in a
               modular Layer2 environment, designed to accelerate your
               development cycle from concept to launch.
             </p>
 
-            <div className="flex flex-row gap-5 items-center">
+            <div className="flex flex-col gap-5 md:flex-row items-center">
               <div className="my-4 py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
                 <Link
                   href="/developer"
