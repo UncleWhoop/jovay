@@ -224,7 +224,7 @@ export default function DAppsPage() {
                   hover:before:left-0 hover:before:top-0 hover:before:w-full hover:before:h-full 
                   hover:before:bg-gradient-to-br hover:before:from-[#326CFF] hover:before:to-[#6EFFFF]"
               >
-                <div className="rounded-[10px] w-full bg-white p-8 h-[229px] relative z-[2] 
+                <div className="rounded-[10px] w-full bg-white p-8 h-[260px] relative z-[2] 
                   shadow-sm group-hover:bg-[#F8FDFF] transition-colors">
                   {/* Header */}
                   <div className="flex items-center gap-4 mb-4">

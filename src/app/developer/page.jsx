@@ -60,7 +60,7 @@ export default function DeveloperPage() {
   };
 
   return (
-    <div className="transition-all duration-300">
+    <div className="transition-all duration-300 bg-white">
       <div className="flex flex-col gap-16">
         {/* Hero Section */}
         <div 
@@ -122,7 +122,7 @@ export default function DeveloperPage() {
         </div>
 
         {/* Gas Fee Prediction */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <div 
             className="w-full max-w-[1160px] p-8 bg-cover bg-no-repeat text-white rounded-3xl flex gap-16"
             style={{ backgroundImage: "url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/JF3JRZ1X4ToAAAAARvAAAAgADlxJAQFr/original')" }}
@@ -169,13 +169,14 @@ export default function DeveloperPage() {
                     <div
                       key={index}
                       onClick={() => setSelectedTx(index)}
-                      className={`group w-[48%] h-16 cursor-pointer transition-all bg-cover bg-no-repeat flex flex-col items-center justify-center gap-0.5 ${
-                        selectedTx === index 
-                          ? "bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/KGmlQ6CFnBwAAAAAQBAAAAgADlxJAQFr/original')]"
-                          : "bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/-5QnRqvnmc8AAAAAKTAAAAgADlxJAQFr/original')]"
-                      } hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/KGmlQ6CFnBwAAAAAQBAAAAgADlxJAQFr/original')]`}
+                      className={`
+                        group rounded-full w-[45%] py-3 cursor-pointer transition-all flex flex-col items-center justify-center gap-0.5
+                        bg-gray-200 
+                        ${selectedTx === index ? "ring-2 ring-[#326CFF] bg-white" : ""}
+                        hover:bg-white
+                      `}
                     >
-                      <div className={`text-sm ${selectedTx === index ? 'text-[#326CFF]' : 'text-white/60'} group-hover:text-[#326CFF]`}>
+                      <div className={`text-sm ${selectedTx === index ? 'text-[#326CFF]' : 'text-[#666F8D]'} group-hover:text-[#326CFF]`}>
                         {tx.gas}
                       </div>
                       <div className="text-sm text-[#191919] opacity-60">{tx.type}</div>
@@ -218,11 +219,7 @@ export default function DeveloperPage() {
 
         {/* Developer Tooling Landscape */}
         <div 
-          className="text-white w-full px-4 pb-24 flex flex-col gap-2 items-center bg-cover bg-no-repeat"
-          style={{ 
-            backgroundImage: "url(https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/-lK5TqRAw4AAAAAAW6AAAAgADlxJAQFr/fmt.webp)",
-            backgroundPosition: "center 100px"
-          }}
+          className="text-white w-full px-4 pb-24 flex flex-col gap-2 items-center bg-[url(https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/-lK5TqRAw4AAAAAAW6AAAAgADlxJAQFr/fmt.webp)] bg-cover bg-[center_100px] bg-no-repeat"
         >
           <div className="w-full max-w-[1160px] flex flex-col items-center gap-8">
             <div className="flex flex-col items-center gap-4">
@@ -234,63 +231,8 @@ export default function DeveloperPage() {
               </div>
             </div>
 
-            {/* Tooling Diagram */}
-            <div className="w-full bg-[rgba(236,242,249,0.75)] border-2 border-[#CDDBFF] rounded-xl p-8">
-              {/* Layer 1: Decentralized Applications */}
-              <div className="mb-4">
-                <div className="rounded bg-gradient-to-r from-[#326CFF] to-[#96FFF5] p-6 mb-4 opacity-60 shadow-lg border border-[#CDDBFF] text-2xl font-black text-white text-center">
-                  Decentralized Applications
-                </div>
-                <div className="bg-[rgba(236,242,249,0.75)] border border-[#CDDBFF] rounded-xl p-4">
-                  <div className="text-2xl font-medium text-black mb-4 flex justify-around">
-                    <div>Applications</div>
-                    <div>Wallets</div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex-1 bg-white p-4 rounded-lg flex justify-between">
-                      {['RWA', 'NFT', 'Web3 Agents', 'DeFi/DePIN', 'PayFi', 'Data'].map((item) => (
-                        <div key={item} className="flex flex-col items-center">
-                          <div className="w-12 h-12 bg-gray-200 rounded-full mb-2"></div>
-                          <div className="text-sm text-[#666F8D]">{item}</div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex-1 bg-white p-4 rounded-lg flex justify-between">
-                      {['Non-custodial Wallets', 'Custodial Wallets', 'Smart Contract Wallets'].map((item) => (
-                        <div key={item} className="flex flex-col items-center">
-                          <div className="w-12 h-12 bg-gray-200 rounded-full mb-2"></div>
-                          <div className="text-sm text-[#666F8D] text-center">{item}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Layer 2: Jovay Stack */}
-              <div className="mb-4">
-                <div className="rounded bg-gradient-to-r from-[#326CFF] to-[#96FFF5] p-6 mb-4 opacity-60 shadow-lg border border-[#CDDBFF] text-2xl font-black text-white text-center">
-                  Jovay Stack
-                </div>
-                <div className="text-center text-gray-600 py-8 bg-white/50 rounded-xl">
-                  Comprehensive development framework and tools
-                </div>
-              </div>
-
-              {/* Layer 3: Interaction Layer */}
-              <div>
-                <div className="rounded bg-gradient-to-r from-[#326CFF] to-[#96FFF5] p-6 mb-4 opacity-60 shadow-lg border border-[#CDDBFF] text-2xl font-black text-white text-center">
-                  Interaction Layer
-                </div>
-                <div className="flex gap-4">
-                  {['Block Explorer', 'Node Service', 'Oracle', 'Language'].map((item) => (
-                    <div key={item} className="flex-1 bg-[rgba(236,242,249,0.75)] border border-[#CDDBFF] rounded-xl p-4 text-center">
-                      <div className="text-xl font-medium text-black mb-4">{item}</div>
-                      <div className="w-12 h-12 bg-gray-200 rounded-full mx-auto"></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="w-full bg-[rgba(236,242,249,0.75)] border-2 border-[#CDDBFF] rounded-xl p-1 flex justify-center">
+              <img src="/images/developer.jpg" alt="Developer landscape" className="w-full h-full rounded-lg" />
             </div>
           </div>
         </div>
