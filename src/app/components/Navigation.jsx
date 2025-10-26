@@ -23,7 +23,7 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <Link
-                href="/"
+                href="/developer"
                 className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors"
               >
                 Developer
@@ -44,10 +44,10 @@ export default function Navigation() {
               </Link>
 
               <Link
-                href="/resources"
+                href="/news"
                 className="font-medium text-base text-[rgba(0,4,12,0.80)] hover:text-[#326CFF] transition-colors"
               >
-                Resource
+                News
               </Link>
 
               <div className="w-px h-6 bg-gray-300"></div>
