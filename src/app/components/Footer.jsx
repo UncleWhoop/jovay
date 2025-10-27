@@ -50,41 +50,41 @@ export default function Footer() {
               {/* Navigation Links */}
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
-                  className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                  className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                   href="/developer"
                 >
                   Developer
                 </Link>
                 <Link
-                  className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                  className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                   href="/ecosystem"
                 >
                   Ecosystem
                 </Link>
                 <Link
-                  className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                  className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                   href="/rwa"
                 >
                   RWA
                 </Link>
                 <Link
-                  className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                  className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                   href="/news"
                 >
-                  Resources
+                  News
                 </Link>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col gap-3">
-                <button className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-6 py-3 text-sm hover:opacity-90 transition-opacity w-full">
+                <button className="bg-gradient-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-6 py-3 text-sm hover:opacity-90 transition-opacity w-full">
                   Contact Us
                 </button>
                 <Link
                   href="https://discord.gg/vBxayT6SBw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-1 px-1 rounded-full bg-linear-to-r from-[#326CFF] to-[#6effff] w-full"
+                  className="py-1 px-1 rounded-full bg-gradient-to-r from-[#326CFF] to-[#6effff] w-full"
                 >
                   <div className="inline-flex items-center justify-center bg-black rounded-full text-[#326cff] px-6 py-3 text-sm relative w-full">
                     <span className="relative z-10 text-[#326CFF]">
@@ -187,38 +187,38 @@ export default function Footer() {
 
                 <div className="flex-1 flex justify-end gap-8">
                   <Link
-                    className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                    className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                     href="/developer"
                   >
                     Developer
                   </Link>
 
                   <Link
-                    className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                    className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                     href="/ecosystem"
                   >
                     Ecosystem
                   </Link>
 
                   <Link
-                    className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                    className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                     href="/rwa"
                   >
                     RWA
                   </Link>
 
                   <Link
-                    className="font-semibold text-white hover:opacity-100 hover:bg-linear-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
+                    className="font-semibold text-white hover:opacity-100 hover:bg-gradient-to-r hover:from-[#326CFF] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent transition-all"
                     href="/news"
                   >
-                    Resources
+                    News
                   </Link>
                 </div>
 
               </div>
 
               <div className="mt-4 flex gap-6">
-                <button className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-6 py-1.5 md:py-[10px] text-xs md:text-base hover:opacity-90 transition-opacity">
+                <button className="bg-gradient-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-6 py-1.5 md:py-[10px] text-xs md:text-base hover:opacity-90 transition-opacity">
                   Contact Us
                 </button>
 
@@ -226,7 +226,7 @@ export default function Footer() {
                   href="https://discord.gg/vBxayT6SBw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-1 px-1 rounded-full bg-linear-to-r from-[#326CFF] to-[#6effff]"
+                  className="py-1 px-1 rounded-full bg-gradient-to-r from-[#326CFF] to-[#6effff]"
                 >
                   <div className="inline-flex items-center justify-center bg-black rounded-full text-[#326cff] px-6 py-[10px] text-base relative">
                     <span className="relative z-10 text-[#326CFF] ">

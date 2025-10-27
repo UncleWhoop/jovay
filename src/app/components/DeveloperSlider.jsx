@@ -85,11 +85,11 @@ export default function DeveloperSlider() {
                     href={card.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-none group rounded-xl bg-linear-to-b from-transparent from-45% to-[#F5FFF7] to-99% border border-[#DEDEDE]
+                    className="flex-none group rounded-xl bg-gradient-to-b from-transparent from-45% to-[#F5FFF7] to-99% border border-[#DEDEDE]
                              w-[200px] h-[290px] py-[30px] px-5 shadow-[inset_0px_6px_0px_0px_#326CFF]
                              flex flex-col items-center justify-between gap-3 
                              hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/VD1MSaJm2MsAAAAARAAAAAgADlxJAQFr/original')] 
-                             hover:bg-size-[100%_auto] hover:bg-position-[0px_100%] hover:bg-no-repeat"
+                             hover:bg-[length:100%_auto] hover:bg-[position:0px_100%] hover:bg-no-repeat"
                   >
                     <img
                       src={card.img}
@@ -124,21 +124,21 @@ export default function DeveloperSlider() {
           {/* Right text block */}
           <div className="flex flex-col justify-between gap-4 w-[90%] md:w-[40%]">
 
-            <h1 className="text-black text-[36px] font-medium flex flex-col text-center md:text-left">
+            <h1 className="text-black text-2xl md:text-[36px] font-medium flex flex-col text-center md:text-left">
               <span>Engineered for Builders.</span>
-              <span className="bg-linear-to-r from-[#6effff] to-[#326cff] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#6effff] to-[#326cff] bg-clip-text text-transparent">
                 Ready for Scale.
               </span>
             </h1>
 
-            <p className="text-[#666F8D] text-lg text-center md:text-left">
+            <p className="text-[#666F8D] text-base md:text-lg text-center md:text-left">
               Jovay provides a comprehensive suite of tools and resources in a
               modular Layer2 environment, designed to accelerate your
               development cycle from concept to launch.
             </p>
 
             <div className="flex flex-col gap-5 md:flex-row items-center">
-              <div className="my-4 py-1 px-1 bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full">
+              <div className="my-4 py-1 px-1 bg-gradient-to-r from-[#326cff] to-[#6effff] rounded-full">
                 <Link
                   href="/developer"
                   className="inline-flex items-center justify-center bg-white rounded-full px-3 md:px-6 py-[15px] h-8 md:h-[52px] text-xs md:text-base relative"
