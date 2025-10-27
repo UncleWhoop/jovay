@@ -134,7 +134,7 @@ export default function InstitutionalConsultationPage() {
           </div>
 
           {/* Right Section - Form */}
-          <div className="p-4 md:p-6 lg:p-8 text-black bg-white rounded-xl md:rounded-2xl shadow-lg w-full lg:w-[540px]">
+          <form onSubmit={handleSubmit} className="p-4 md:p-6 lg:p-8 text-black bg-white rounded-xl md:rounded-2xl shadow-lg w-full lg:w-[540px]">
             {/* Name Field */}
             <div className="mb-4 md:mb-6">
               <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -289,8 +289,7 @@ export default function InstitutionalConsultationPage() {
 
             {/* Submit Button */}
             <button
-              type="button"
-              onClick={handleSubmit}
+              type="submit"
               className="w-full bg-blue-600 text-white py-3 md:py-3 px-6 rounded-lg font-medium text-base hover:bg-blue-700 active:bg-blue-800 transition-colors flex items-center justify-center gap-2 touch-manipulation"
             >
               Submit
@@ -298,7 +297,7 @@ export default function InstitutionalConsultationPage() {
                 <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" />
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
