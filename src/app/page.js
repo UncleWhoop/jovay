@@ -4,7 +4,6 @@ import DeveloperSlider from "./components/DeveloperSlider";
 export default function Home() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen bg-white overflow-x-hidden">
-    
       <main className="flex flex-col items-center sm:items-start">
         <section className="w-full flex items-center justify-center bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/bHuJSbVv7CUAAAAATUAAAAgADlxJAQFr/original')] md:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/S1_HQ5bs5MUAAAAAeLAAAAgADlxJAQFr/original')] bg-cover bg-center bg-no-repeat p-[84px_24px_40px] md:p-[210px_100px_150px]">
           <div className="w-full md:w-[1160px] flex flex-col items-stretch gap-4">
@@ -38,8 +37,6 @@ export default function Home() {
               >
                 Institutional solutions
               </Link>
-
-             
             </div>
           </div>
         </section>
@@ -412,34 +409,12 @@ export default function Home() {
 
             <div className="mt-4 flex flex-col-reverse md:flex-row items-start md:items-center gap-2.5 md:gap-9">
               <div className="flex flex-col items-start justify-start gap-4">
-                <div className="border-2 border-transparent bg-linear-to-r from-[#326CFF] to-[#8B5CF6] bg-clip-border h-9 md:h-[52px] rounded-[34px] md:rounded-[48px] relative before:absolute before:inset-[2px] before:bg-white before:rounded-[32px] md:before:rounded-[46px] before:-z-10">
-                  <div className="relative z-10 flex items-center h-8 md:h-12 w-full rounded-[34px] md:rounded-[48px] border-none pl-6 bg-white">
-                    <div className="flex items-center">
-                      <svg
-                        viewBox="64 64 896 896"
-                        className="w-4 h-4 mr-2"
-                        fill="currentColor"
-                      >
-                        <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0068.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z"></path>
-                      </svg>
-                    </div>
-                    <input
-                      type="text"
-                      placeholder="Send your email"
-                      className="flex-1 bg-transparent border-none outline-none text-black text-sm"
-                    />
-                    <button className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-3 md:px-6 py-[15px] h-8 md:h-12 text-xs md:text-sm flex items-center gap-2 relative left-px hover:opacity-90 transition-opacity">
-                      <span>Book a demo</span>
-                      <svg
-                        viewBox="64 64 896 896"
-                        className="w-4 h-4"
-                        fill="currentColor"
-                      >
-                        <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+                <Link
+                  href="/institutions-retention"
+                  className="bg-linear-to-r from-[#326cff] to-[#6effff] rounded-full border-none text-white px-3 md:px-6 py-[15px] h-8 md:h-12 text-xs md:text-sm flex items-center gap-2 relative left-px hover:opacity-90 transition-opacity"
+                >
+                  Book a demo
+                </Link>
               </div>
 
               <Link

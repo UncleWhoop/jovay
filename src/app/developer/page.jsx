@@ -42,11 +42,11 @@ const developerResources = [
 ];
 
 const transactionTypes = [
-  { gas: "21,000 Gas", type: "Simple transfers", active: true },
-  { gas: "110,000 Gas", type: "NFT minting", active: false },
-  { gas: "55,000 Gas", type: "ERC20 transfers", active: false },
-  { gas: "100,000 Gas", type: "Complex contract calls", active: false },
-  { gas: "150,000 Gas", type: "DEX trading", active: false }
+  { gas: "21,000 Gas", type: "Simple transfers" },
+  { gas: "110,000 Gas", type: "NFT minting" },
+  { gas: "55,000 Gas", type: "ERC20 transfers" },
+  { gas: "100,000 Gas", type: "Complex contract calls" },
+  { gas: "150,000 Gas", type: "DEX trading" }
 ];
 
 export default function DeveloperPage() {
@@ -64,20 +64,20 @@ export default function DeveloperPage() {
       <div className="flex flex-col gap-16">
         {/* Hero Section */}
         <div 
-          className="pt-52 pb-36 bg-cover bg-no-repeat flex flex-col items-center gap-4"
+          className="pt-24 md:pt-52 pb-16 md:pb-36 bg-cover bg-no-repeat flex flex-col items-center gap-4 px-4"
           style={{ backgroundImage: "url(https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/j2Z7QIOplnQAAAAAQ9AAAAgADlxJAQFr/original)" }}
         >
-          <h2 className="text-5xl text-center font-semibold text-black">
+          <h2 className="text-3xl md:text-5xl text-center font-semibold text-black">
             Join The Developer Community
           </h2>
-          <div className="text-[#666F8D] text-center">
+          <div className="text-[#666F8D] text-center text-sm md:text-base max-w-2xl">
             Collaborate, share knowledge, and stay updated on the latest Web3 innovations.
           </div>
           <a
             href="https://discord.gg/vBxayT6SBw"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-16 px-6 py-3 text-base rounded-full border-none text-white bg-gradient-to-r from-blue-600 to-cyan-400 hover:opacity-90 transition-opacity"
+            className="mt-8 md:mt-16 px-6 py-3 text-base rounded-full border-none text-white bg-gradient-to-r from-blue-600 to-cyan-400 hover:opacity-90 transition-opacity"
           >
             Join our Discord
           </a>
@@ -86,15 +86,15 @@ export default function DeveloperPage() {
         {/* Developer Center Section */}
         <div className="w-full px-4 flex flex-col gap-2 items-center">
           <div className="w-full max-w-[1160px] flex flex-col items-center gap-8">
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-4xl text-black text-center font-medium">Developer Center</h2>
-              <div className="text-[#666F8D] text-center">
+            <div className="flex flex-col items-center gap-4 px-4">
+              <h2 className="text-2xl md:text-4xl text-black text-center font-medium">Developer Center</h2>
+              <div className="text-[#666F8D] text-center text-sm md:text-base max-w-3xl">
                 Built on Jovay Layer2, a developer-friendly ecosystem to accelerate the efficient deployment and iteration of Web3 applications.
               </div>
             </div>
 
             {/* Resource Cards */}
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full px-4">
               {developerResources.map((resource, index) => (
                 <a
                   key={index}
@@ -103,15 +103,15 @@ export default function DeveloperPage() {
                   rel="noopener noreferrer"
                   className="group"
                 >
-                  <div className="rounded-xl bg-gradient-to-b from-transparent from-45% to-[#F5FFF7] to-99% border border-[#DEDEDE] shadow-sm w-[350px] h-[340px] p-8 flex flex-col items-center justify-between gap-3 hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/Bu2ZTolrvBcAAAAAQOAAAAgADlxJAQFr/original')] hover:bg-cover hover:bg-no-repeat transition-all">
+                  <div className="rounded-xl bg-gradient-to-b from-transparent from-45% to-[#F5FFF7] to-99% border border-[#DEDEDE] shadow-sm w-full h-[280px] md:h-[340px] p-6 md:p-8 flex flex-col items-center justify-between gap-3 hover:bg-[url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/Bu2ZTolrvBcAAAAAQOAAAAgADlxJAQFr/original')] hover:bg-cover hover:bg-no-repeat transition-all">
                     <div className="flex flex-col items-center gap-3">
-                      <img src={resource.icon} alt={resource.title} className="w-20 h-20" />
-                      <h3 className="text-[#191919] text-2xl font-medium">{resource.title}</h3>
-                      <div className="text-[#7C7E7A] text-lg text-center">
+                      <img src={resource.icon} alt={`${resource.title} icon`} className="w-16 h-16 md:w-20 md:h-20" />
+                      <h3 className="text-[#191919] text-lg md:text-2xl font-medium text-center">{resource.title}</h3>
+                      <div className="text-[#7C7E7A] text-sm md:text-lg text-center">
                         {resource.description}
                       </div>
                     </div>
-                    <button className="rounded-full text-black py-1 px-3 text-base border border-gray-300 bg-white hover:border-blue-500 hover:text-blue-500 transition-all">
+                    <button className="rounded-full text-black py-1 px-3 text-sm md:text-base border border-gray-300 bg-white hover:border-blue-500 hover:text-blue-500 transition-all">
                       Enter
                     </button>
                   </div>
@@ -122,19 +122,19 @@ export default function DeveloperPage() {
         </div>
 
         {/* Gas Fee Prediction */}
-        <div className="flex items-center justify-center ">
+        <div className="flex items-center justify-center px-4">
           <div 
-            className="w-full max-w-[1160px] p-8 bg-cover bg-no-repeat text-white rounded-3xl flex gap-16"
+            className="w-full max-w-[1160px] p-4 md:p-8 bg-cover bg-no-repeat text-white rounded-3xl flex flex-col lg:flex-row gap-8 lg:gap-16"
             style={{ backgroundImage: "url('https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/JF3JRZ1X4ToAAAAARvAAAAgADlxJAQFr/original')" }}
           >
             {/* Left Section */}
-            <div className="flex flex-col gap-8 flex-1">
-              <h2 className="text-4xl font-medium">Gas Fee Prediction</h2>
-              <div>Real-time comparison of transaction costs between Layer1 and Layer2 networks</div>
+            <div className="flex flex-col gap-6 md:gap-8 flex-1">
+              <h2 className="text-2xl md:text-4xl font-medium">Gas Fee Prediction</h2>
+              <div className="text-sm md:text-base">Real-time comparison of transaction costs between Layer1 and Layer2 networks</div>
               
               {/* Congestion Slider */}
               <div className="w-full">
-                <div className="mb-2">
+                <div className="mb-2 text-sm md:text-base">
                   Network Congestion <span className="ml-2">{getCongestionLabel()}</span>
                 </div>
                 <div className="relative w-full py-4">
@@ -159,27 +159,27 @@ export default function DeveloperPage() {
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col gap-8 flex-1">
+            <div className="flex flex-col gap-6 md:gap-8 flex-1">
               {/* Transaction Types */}
               <div className="flex flex-col gap-3">
-                <div>Transaction Types</div>
+                <div className="text-sm md:text-base">Transaction Types</div>
                 <div className="border-t border-white/40"></div>
-                <div className="flex flex-wrap gap-3">
+                <div className="grid grid-cols-2 gap-2 md:gap-3">
                   {transactionTypes.map((tx, index) => (
                     <div
                       key={index}
                       onClick={() => setSelectedTx(index)}
                       className={`
-                        group rounded-full w-[45%] py-3 cursor-pointer transition-all flex flex-col items-center justify-center gap-0.5
+                        group rounded-full py-2 md:py-3 cursor-pointer transition-all flex flex-col items-center justify-center gap-0.5
                         bg-gray-200 
                         ${selectedTx === index ? "ring-2 ring-[#326CFF] bg-white" : ""}
                         hover:bg-white
                       `}
                     >
-                      <div className={`text-sm ${selectedTx === index ? 'text-[#326CFF]' : 'text-[#666F8D]'} group-hover:text-[#326CFF]`}>
+                      <div className={`text-xs md:text-sm ${selectedTx === index ? 'text-[#326CFF]' : 'text-[#666F8D]'} group-hover:text-[#326CFF]`}>
                         {tx.gas}
                       </div>
-                      <div className="text-sm text-[#191919] opacity-60">{tx.type}</div>
+                      <div className="text-xs md:text-sm text-[#191919] opacity-60 text-center">{tx.type}</div>
                     </div>
                   ))}
                 </div>
@@ -187,29 +187,29 @@ export default function DeveloperPage() {
 
               {/* Fee Estimates */}
               <div className="flex flex-col gap-3">
-                <div>Estimate transaction fees</div>
+                <div className="text-sm md:text-base">Estimate transaction fees</div>
                 <div className="border-t border-white/40"></div>
-                <div className="flex justify-between gap-3">
-                  <div className="text-white text-2xl max-w-[200px] flex flex-col justify-between gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="text-white text-lg md:text-2xl flex flex-col justify-between gap-2">
                     <div className="font-bold">
                       <span>$</span>
                       <span>0.030736</span>
                     </div>
-                    <div className="text-sm opacity-60">Layer1 (Ethereum)</div>
+                    <div className="text-xs md:text-sm opacity-60">Layer1 (Ethereum)</div>
                   </div>
-                  <div className="text-white text-2xl max-w-[200px] flex flex-col justify-between gap-3">
+                  <div className="text-white text-lg md:text-2xl flex flex-col justify-between gap-2">
                     <div className="font-bold">
                       <span>$</span>
                       <span>0.000084</span>
                     </div>
-                    <div className="text-sm opacity-60">Layer2 (Jovay)</div>
+                    <div className="text-xs md:text-sm opacity-60">Layer2 (Jovay)</div>
                   </div>
-                  <div className="text-white text-2xl max-w-[200px] flex flex-col justify-between gap-3">
+                  <div className="text-white text-lg md:text-2xl flex flex-col justify-between gap-2">
                     <div className="font-bold">
                       <span>366</span>
                       <span>x</span>
                     </div>
-                    <div className="text-sm opacity-60">Cost Ratio</div>
+                    <div className="text-xs md:text-sm opacity-60">Cost Ratio</div>
                   </div>
                 </div>
               </div>
@@ -219,20 +219,20 @@ export default function DeveloperPage() {
 
         {/* Developer Tooling Landscape */}
         <div 
-          className="text-white w-full px-4 pb-24 flex flex-col gap-2 items-center bg-[url(https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/-lK5TqRAw4AAAAAAW6AAAAgADlxJAQFr/fmt.webp)] bg-cover bg-[center_100px] bg-no-repeat"
+          className="text-white w-full px-4 pb-16 md:pb-24 flex flex-col gap-2 items-center bg-[url(https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/-lK5TqRAw4AAAAAAW6AAAAgADlxJAQFr/fmt.webp)] bg-cover bg-[center_100px] bg-no-repeat"
         >
-          <div className="w-full max-w-[1160px] flex flex-col items-center gap-8">
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-4xl text-center font-medium text-black">
+          <div className="w-full max-w-[1160px] flex flex-col items-center gap-6 md:gap-8">
+            <div className="flex flex-col items-center gap-4 px-4">
+              <h2 className="text-2xl md:text-4xl text-center font-medium text-black">
                 Developer Tooling Landscape
               </h2>
-              <div className="text-[#666F8D] max-w-[974px] text-center">
+              <div className="text-[#666F8D] max-w-[974px] text-center text-sm md:text-base">
                 Streamline integration of top Web3 projects into a unified toolset, offering effortless developer experience and trial capabilities.
               </div>
             </div>
 
             <div className="w-full bg-[rgba(236,242,249,0.75)] border-2 border-[#CDDBFF] rounded-xl p-1 flex justify-center">
-              <img src="/images/developer.jpg" alt="Developer landscape" className="w-full h-full rounded-lg" />
+              <img src="/images/developer.jpg" alt="Developer tooling landscape showing various Web3 development tools and integrations" className="w-full h-full rounded-lg" />
             </div>
           </div>
         </div>

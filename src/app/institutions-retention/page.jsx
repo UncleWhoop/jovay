@@ -62,13 +62,13 @@ export default function InstitutionalConsultationPage() {
 
   return (
     <div 
-      className="relative min-h-screen py-8 md:py-16 overflow-hidden"
+      className="relative min-h-screen py-4 md:py-16 overflow-hidden"
       style={{
         background: 'linear-gradient(180deg, #F1F7FF 0%, rgba(255, 255, 255, 0) 100%)'
       }}
     >
-      {/* Animated Grid Background */}
-      <svg className="absolute inset-0 w-full h-full z-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      {/* Static Grid Background for Mobile, Animated for Desktop */}
+      <svg className="absolute inset-0 w-full h-full z-0 hidden md:block" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <defs>
           <pattern id="grid" width="135" height="135" patternUnits="userSpaceOnUse">
             <path d="M 135 0 L 0 0 0 135" fill="none" stroke="#E5ECFF" strokeWidth="1" />
@@ -103,18 +103,28 @@ export default function InstitutionalConsultationPage() {
         ))}
       </svg>
 
+      {/* Static Grid Background for Mobile */}
+      <svg className="absolute inset-0 w-full h-full z-0 md:hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <defs>
+          <pattern id="grid-mobile" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E5ECFF" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-mobile)" />
+      </svg>
+
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-[1160px] mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-6 md:gap-8 lg:gap-16">
           {/* Left Section */}
-          <div className="flex flex-col gap-8 flex-1 w-full lg:w-auto">
+          <div className="flex flex-col gap-4 md:gap-8 flex-1 w-full lg:w-auto">
             <img
-              className="w-20 h-20 md:w-[120px] md:h-[120px] rounded-xl"
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-[120px] lg:h-[120px] rounded-xl"
               src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/wvZ2SoOqMYYAAAAAYUAAAAgADlxJAQFr/original"
               alt="Request for Institutional Consultation"
             />
             <div className="flex flex-col gap-2">
-              <h1 className="text-black text-3xl md:text-[42px] font-medium leading-tight">
+              <h1 className="text-black text-2xl md:text-3xl lg:text-[42px] font-medium leading-tight">
                 Request for Institutional Consultation
               </h1>
               <p className="text-[#00040C] text-sm md:text-base opacity-60">
@@ -124,9 +134,9 @@ export default function InstitutionalConsultationPage() {
           </div>
 
           {/* Right Section - Form */}
-          <div className="p-6 py-[20rem] text-black md:p-8 bg-white rounded-2xl shadow-lg w-full lg:w-[540px]">
+          <div className="p-4 md:p-6 lg:p-8 text-black bg-white rounded-xl md:rounded-2xl shadow-lg w-full lg:w-[540px]">
             {/* Name Field */}
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Your name <span className="text-red-500">*</span>
               </label>
@@ -137,7 +147,7 @@ export default function InstitutionalConsultationPage() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Please enter your name"
-                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`w-full px-3 py-3 md:px-4 md:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base ${
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -145,7 +155,7 @@ export default function InstitutionalConsultationPage() {
             </div>
 
             {/* Email Field */}
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <label htmlFor="email" className="block text-sm font-medium mb-2">
                 Email <span className="text-red-500">*</span>
               </label>
@@ -156,7 +166,7 @@ export default function InstitutionalConsultationPage() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Please enter your email"
-                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`w-full px-3 py-3 md:px-4 md:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -164,7 +174,7 @@ export default function InstitutionalConsultationPage() {
             </div>
 
             {/* Organization Field */}
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <label htmlFor="organization" className="block text-sm font-medium mb-2">
                 Company/Organization <span className="text-red-500">*</span>
               </label>
@@ -175,7 +185,7 @@ export default function InstitutionalConsultationPage() {
                 value={formData.organization}
                 onChange={handleChange}
                 placeholder="Please enter your organization"
-                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`w-full px-3 py-3 md:px-4 md:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base ${
                   errors.organization ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -183,7 +193,7 @@ export default function InstitutionalConsultationPage() {
             </div>
 
             {/* Job Title Field */}
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <label htmlFor="role" className="block text-sm font-medium mb-2">
                 Job Title <span className="text-red-500">*</span>
               </label>
@@ -194,7 +204,7 @@ export default function InstitutionalConsultationPage() {
                 value={formData.role}
                 onChange={handleChange}
                 placeholder="Please enter your job title"
-                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`w-full px-3 py-3 md:px-4 md:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base ${
                   errors.role ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -202,7 +212,7 @@ export default function InstitutionalConsultationPage() {
             </div>
 
             {/* Idea Field */}
-            <div className="mb-6">
+            <div className="mb-4 md:mb-6">
               <label htmlFor="idea" className="block text-sm font-medium mb-2">
                 What are you hoping to build or learn about? <span className="text-red-500">*</span>
               </label>
@@ -213,7 +223,7 @@ export default function InstitutionalConsultationPage() {
                 onChange={handleChange}
                 placeholder="Please enter what you are hoping to build or learn about"
                 rows="3"
-                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${
+                className={`w-full px-3 py-3 md:px-4 md:py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-base ${
                   errors.idea ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -221,14 +231,14 @@ export default function InstitutionalConsultationPage() {
             </div>
 
             {/* Privacy Notice */}
-            <div className="text-black/90 text-xs mb-3">
+            <div className="text-black/90 text-xs mb-3 leading-relaxed">
               By clicking Submit above, I acknowledge and agree to the collection, use, transfer, disclosure and processing of my personal data as set out in the
               <a className="mx-1 text-blue-600 hover:underline" href="https://docs.jovay.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
               </a>.
             </div>
 
-            <div className="text-black/90 text-xs mb-3">
+            <div className="text-black/90 text-xs mb-3 leading-relaxed">
               Jovay Labs Company Limited would like to use your name and email address to send you marketing communications in relation to our Services as described in the
               <a className="mx-1 text-blue-600 hover:underline" href="https://docs.jovay.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
@@ -243,13 +253,13 @@ export default function InstitutionalConsultationPage() {
                   name="acceptMarketThirdParties"
                   checked={formData.acceptMarketThirdParties}
                   onChange={handleChange}
-                  className="mt-0.5 w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                  className="mt-0.5 w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer shrink-0"
                 />
-                <span>I would like to receive direct marketing communications from Jovay Labs Company Limited.</span>
+                <span className="leading-relaxed">I would like to receive direct marketing communications from Jovay Labs Company Limited.</span>
               </label>
             </div>
 
-            <div className="text-black/90 text-xs mb-3">
+            <div className="text-black/90 text-xs mb-3 leading-relaxed">
               We would also like to share (for gain) your name and email address with our affiliated companies or third party service providers selected by us so that we or they may send you marketing communications in relation to their products and services as described in the
               <a className="mx-1 text-blue-600 hover:underline" href="https://docs.jovay.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
@@ -264,13 +274,13 @@ export default function InstitutionalConsultationPage() {
                   name="acceptMarketAffiliates"
                   checked={formData.acceptMarketAffiliates}
                   onChange={handleChange}
-                  className="mt-0.5 w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                  className="mt-0.5 w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer shrink-0"
                 />
-                <span>I would like to receive direct marketing communications from Jovay's affiliated companies and/or third party service providers selected by Jovay.</span>
+                <span className="leading-relaxed">I would like to receive direct marketing communications from Jovay's affiliated companies and/or third party service providers selected by Jovay.</span>
               </label>
             </div>
 
-            <div className="text-black/45 text-xs mb-4">
+            <div className="text-black/45 text-xs mb-4 leading-relaxed">
               You may opt out of receiving marketing communications at any time by using the unsubscribe facility outlined in the marketing communication or by contacting us at
               <a className="mx-1 text-blue-600 hover:underline" href="mailto:privacy@jovay.io">
                 privacy@jovay.io
@@ -281,7 +291,7 @@ export default function InstitutionalConsultationPage() {
             <button
               type="button"
               onClick={handleSubmit}
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium text-base hover:bg-blue-700 active:bg-blue-800 transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 text-white py-3 md:py-3 px-6 rounded-lg font-medium text-base hover:bg-blue-700 active:bg-blue-800 transition-colors flex items-center justify-center gap-2 touch-manipulation"
             >
               Submit
               <svg viewBox="64 64 896 896" width="1em" height="1em" fill="currentColor">

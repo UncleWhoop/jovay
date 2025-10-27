@@ -115,7 +115,7 @@ const dapps = [
   }
 ];
 
-const categories = ["All", "DeFi", "NFT", "Gaming", "Metaverse", "Social", "Tools"];
+const categories = ["All", "DeFi", "NFT", "Gaming", "Social", "Tools"];
 
 export default function DAppsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -130,7 +130,7 @@ export default function DAppsPage() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="pt-20 relative overflow-hidden">
+      <div className="pt-16 md:pt-20 relative overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -152,35 +152,36 @@ export default function DAppsPage() {
             backgroundRepeat: "no-repeat"
           }}
         >
-          <img alt="" className="absolute top-16 left-[10%] w-36 h-36" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/7jB0T7IB4GwAAAAAQDAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-44 left-[5%] w-36 h-36" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/0VDkQJtY7SEAAAAAQGAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-56 left-[15%] w-30 h-30" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/sJWIT5tcVmQAAAAAQFAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-96 left-[8%] w-44 h-44" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/D9FWR6LiH54AAAAAQEAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-36 right-[16%] w-25 h-25" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/heEOQbCPz9sAAAAAQEAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-36 right-[1%] w-34 h-34" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/O7qnT7VCM9YAAAAAQIAAAAgADlxJAQFr/original" />
-          <img alt="" className="absolute top-80 right-[10%] w-46 h-46" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/eyvXQIHUkQYAAAAAQFAAAAgADlxJAQFr/original" />
+          {/* Decorative images - hidden on mobile, scaled down on tablet */}
+          <img alt="" className="hidden md:block absolute top-16 left-[10%] w-24 h-24 lg:w-36 lg:h-36" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/7jB0T7IB4GwAAAAAQDAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden lg:block absolute top-44 left-[5%] w-36 h-36" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/0VDkQJtY7SEAAAAAQGAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden xl:block absolute top-56 left-[15%] w-30 h-30" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/sJWIT5tcVmQAAAAAQFAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden lg:block absolute top-96 left-[8%] w-32 h-32 xl:w-44 xl:h-44" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/D9FWR6LiH54AAAAAQEAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden md:block absolute top-36 right-[16%] w-16 h-16 lg:w-25 lg:h-25" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/heEOQbCPz9sAAAAAQEAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden md:block absolute top-36 right-[1%] w-20 h-20 lg:w-34 lg:h-34" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/O7qnT7VCM9YAAAAAQIAAAAgADlxJAQFr/original" />
+          <img alt="" className="hidden lg:block absolute top-80 right-[10%] w-32 h-32 xl:w-46 xl:h-46" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/eyvXQIHUkQYAAAAAQFAAAAgADlxJAQFr/original" />
         </div>
 
         {/* Hero Content */}
-        <div className="w-full max-w-[677px] mx-auto h-[520px] flex flex-col items-center justify-center relative z-10 px-4">
-          <h2 className="text-5xl md:text-[56px] font-semibold leading-tight md:leading-[84px] text-center capitalize text-black max-w-[600px]">
+        <div className="w-full max-w-[677px] mx-auto min-h-[400px] md:min-h-[520px] flex flex-col items-center justify-center relative z-10 px-4 py-12 md:py-0">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-tight md:leading-[84px] text-center capitalize text-black max-w-[600px]">
             Discover the best DApps
           </h2>
-          <p className="text-lg font-normal leading-6 text-center text-[#1D1E1E] mt-4 max-w-lg">
+          <p className="text-base md:text-lg font-normal leading-6 text-center text-[#1D1E1E] mt-4 max-w-lg px-4">
             Explore the most innovative decentralized applications DeFi, NFTs, Gaming, and Metaverse. Find the big thing in web3.
           </p>
           
           {/* Stats */}
-          <div className="mt-10 flex justify-center w-full">
-            <div className="flex items-center gap-8">
-              <div className="flex items-center gap-4">
-                <img className="w-8 h-8" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/jxkLTLZDa58AAAAAK6AAAAgADlxJAQFr/original" alt="" />
-                <span className="text-lg font-medium text-[#326CFF]">{featuredCount} Featured</span>
+          <div className="mt-8 md:mt-10 flex justify-center w-full">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+              <div className="flex items-center gap-3 md:gap-4">
+                <img className="w-7 h-7 md:w-8 md:h-8" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/jxkLTLZDa58AAAAAK6AAAAgADlxJAQFr/original" alt="" />
+                <span className="text-base md:text-lg font-medium text-[#326CFF]">{featuredCount} Featured</span>
               </div>
-              <div className="w-px h-7 bg-gray-300"></div>
-              <div className="flex items-center gap-4">
-                <img className="w-8 h-8" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/jxkLTLZDa58AAAAAK6AAAAgADlxJAQFr/original" alt="" />
-                <span className="text-lg font-medium text-[#326CFF]">{totalDapps} Total DApps</span>
+              <div className="hidden sm:block w-px h-7 bg-gray-300"></div>
+              <div className="flex items-center gap-3 md:gap-4">
+                <img className="w-7 h-7 md:w-8 md:h-8" src="https://mdn.alipayobjects.com/huamei_rqgebe/afts/img/jxkLTLZDa58AAAAAK6AAAAgADlxJAQFr/original" alt="" />
+                <span className="text-base md:text-lg font-medium text-[#326CFF]">{totalDapps} Total DApps</span>
               </div>
             </div>
           </div>
@@ -188,15 +189,15 @@ export default function DAppsPage() {
       </div>
 
       {/* Main Content */}
-      <div className="w-full max-w-[1024px] mx-auto pt-16 px-4">
+      <div className="w-full max-w-[1024px] mx-auto pt-8 md:pt-16 px-4">
         {/* Category Filter */}
-        <div className="flex justify-between items-center mb-10">
-          <div className="inline-flex bg-gray-100 rounded-full p-1">
+        <div className="flex justify-start items-center mb-8 md:mb-10">
+          <div className="inline-flex bg-gray-100 rounded-full p-1 overflow-x-auto scrollbar-hide max-w-full">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all whitespace-nowrap ${
                   selectedCategory === category
                     ? 'bg-white text-black shadow-sm'
                     : 'text-gray-600 hover:text-black'
@@ -209,7 +210,7 @@ export default function DAppsPage() {
         </div>
 
         {/* DApps Grid */}
-        <div className="mb-24 max-h-[500px] overflow-y-auto">
+        <div className="mb-12 md:mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredDapps.map((dapp) => (
               <a
@@ -224,17 +225,17 @@ export default function DAppsPage() {
                   hover:before:left-0 hover:before:top-0 hover:before:w-full hover:before:h-full 
                   hover:before:bg-gradient-to-br hover:before:from-[#326CFF] hover:before:to-[#6EFFFF]"
               >
-                <div className="rounded-[10px] w-full bg-white p-8 h-[260px] relative z-[2] 
-                  shadow-sm group-hover:bg-[#F8FDFF] transition-colors">
+                <div className="rounded-[10px] w-full bg-white p-6 md:p-8 min-h-[240px] md:min-h-[260px] relative z-[2] 
+                  shadow-sm group-hover:bg-[#F8FDFF] transition-colors flex flex-col">
                   {/* Header */}
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-3 md:gap-4 mb-4">
                     <img
-                      className="w-16 h-16 rounded-full object-cover"
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover flex-shrink-0"
                       alt={dapp.name}
                       src={dapp.image}
                     />
                     <div className="flex-1 min-w-0">
-                      <div className="text-lg font-medium text-[#191919] mb-1 
+                      <div className="text-base md:text-lg font-medium text-[#191919] mb-1 
                         group-hover:text-[#326CFF] truncate transition-colors">
                         {dapp.name}
                       </div>
@@ -242,7 +243,7 @@ export default function DAppsPage() {
                         <span className="text-[#666F8D] text-xs">Be the first to rate!</span>
                         <img
                           alt="edit"
-                          className="w-4 h-4"
+                          className="w-3 h-3 md:w-4 md:h-4"
                           src="https://mdn.alipayobjects.com/huamei_lc6ihc/afts/img/m9nhQZTN9U4AAAAAJyAAAAgADltnAQFr/original"
                         />
                       </div>
@@ -250,16 +251,16 @@ export default function DAppsPage() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-[#7C7E7A] line-clamp-2 mb-6 h-11">
+                  <p className="text-sm text-[#7C7E7A] line-clamp-2 mb-4 md:mb-6 flex-grow">
                     {dapp.description}
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 overflow-x-auto scrollbar-hide">
+                  <div className="flex flex-wrap gap-2">
                     {dapp.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="rounded text-sm text-[#666F8D] px-2.5 py-1 whitespace-nowrap"
+                        className="rounded text-xs md:text-sm text-[#666F8D] px-2 md:px-2.5 py-1 whitespace-nowrap"
                         style={{ backgroundColor: tag.bg }}
                       >
                         {tag.label}
